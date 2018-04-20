@@ -1,0 +1,331 @@
+﻿/* signup page starts */
+#signup {
+    background: url('../images/register.jpg');
+    min-height: 858px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.signup_form {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 280px;
+    height: 550px;
+    position: relative;
+    left: 200px;
+    top: 75px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    color: #484848 !important;
+}
+
+.table_font {
+    width: 100%;
+}
+
+.title {
+    font-size: 19px;
+    line-height: 30px;
+    color: #484848;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0px;
+    width: 94%;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.text {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.reg_align {
+    text-align: center;
+}
+
+.reg_label {
+    font-size: 17px;
+    line-height: 30px;
+    color: #484848;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0px;
+    width: 94%;
+    margin-bottom: 16px;
+}
+
+.reg_month {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    width: 80%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.reg_day {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.reg_year {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    width: 80%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.link_2 {
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 55px;
+    padding-left: 16px;
+    padding-right: 32px;
+    color: #e8491d;
+    border: 1px solid #e8491d;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 25px;
+}
+
+/* signup page ends */
+
+/* login page starts */
+
+#login {
+    background: url('../images/login.jpg');
+    min-height: 858px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.login_form {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 280px;
+    height: 250px;
+    position: relative;
+    left: 65%;
+    top: 200px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    color: #484848 !important;
+}
+
+.link {
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 50px;
+    padding-left: 16px;
+    padding-right: 24px;
+    color: #e8491d;
+    border: 1px solid #e8491d;
+    margin-right: -13px;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 25px;
+}
+
+.member_text {
+    font-size: 14px;
+    line-height: 30px;
+    color: #484848;
+    background-color: transparent;
+    border: 0px;
+    text-align: center;
+}
+
+.column_height {
+    height: 8px;
+}
+
+/* login page ends */
+
+/* host signup begins */
+
+#host_signup {
+    background: url('../images/host.jpg');
+    min-height: 858px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.host_signup_form {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 600px;
+    height: 710px;
+    position: relative;
+    left: 200px;
+    top: 50px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    color: #484848 !important;
+}
+
+.text_2 {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    width: 226px;
+}
+
+.text_3 {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    width: 250px;
+    margin-right: 16px;
+}
+
+.text_4 {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    width: 84px;
+    margin-right: 16px;
+}
+
+.text_5 {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    width: 84px;
+}
+
+.select {
+    font-size: 19px;
+    line-height: 24px;
+    color: #484848;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0px;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DBDBDB;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    width: 252px;
+}
+
+/* host signup ends */
+
+/* host index starts */
+
+#host_showcase {
+    min-height: 400px;
+    background: url('../images/maxresdefault.jpg') no-repeat 0 -350px;
+    text-align: center;
+    color: #ffffff;
+    background-position: center;
+}
+
+#boxes .host_box {
+    float: left;
+    text-align: left;
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 20px;
+    height: 500px;
+}
+
+/* host index ends */
+
+#add_host_place {
+    min-height: 700px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.host_place_form {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 600px;
+    height: 550px;
+    position: relative;
+    left: 200px;
+    top: 50px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    color: #484848 !important;
+}

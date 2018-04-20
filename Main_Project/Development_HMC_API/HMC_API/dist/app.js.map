@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/app.js"],"names":["express","require"],"mappings":";;AAAA,IAAIA,UAAUC,QAAQ,SAAR,CAAd,C,CAAkC","file":"app.js","sourcesContent":["var express = require('express'); // importing express\r\n"]}

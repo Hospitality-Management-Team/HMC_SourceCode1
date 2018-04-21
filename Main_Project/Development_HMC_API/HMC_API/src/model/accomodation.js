@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import Review from './review';
 let Schema = mongoose.Schema;
 
+// Schema for accomodation model
 let AccomodationSchema = new Schema({
   ownerfirstname: {
     type: String,

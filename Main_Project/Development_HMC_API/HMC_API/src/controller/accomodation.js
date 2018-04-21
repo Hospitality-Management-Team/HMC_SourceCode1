@@ -30,7 +30,7 @@ export default({ config, db }) => {
     });
   });
 
-  // '/v1/accomodation/add' - POST - add a accomodation
+  // '/v1/accomodation/add' - POST - add an accomodation
   api.post('/add',authenticate,  (req, res) => {
     let newAccomodation = new Accomodation();
     newAccomodation.ownerfirstname = req.body.ownerfirstname;

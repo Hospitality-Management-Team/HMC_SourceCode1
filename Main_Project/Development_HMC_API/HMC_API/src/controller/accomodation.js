@@ -33,10 +33,21 @@ export default({ config, db }) => {
   // '/v1/accomodation/add' - POST - add a accomodation
   api.post('/add',authenticate,  (req, res) => {
     let newAccomodation = new Accomodation();
-    newAccomodation.name = req.body.name;
+    newAccomodation.ownerfirstname = req.body.ownerfirstname;
+    newAccomodation.ownerlastname = req.body.ownerlastname;
     newAccomodation.accomodationtype = req.body.accomodationtype;
     newAccomodation.avgcost = req.body.avgcost;
     newAccomodation.geometry.coordinates = req.body.geometry.coordinates;
+    newAccomodation.mailaddress = req.body.mailaddress;
+    newAccomodation.phonenumber = req.body.phonenumber;
+    newAccomodation.propertytype = req.body.propertytype;
+    newAccomodation.no_of_rooms = req.body.no_of_rooms;
+    newAccomodation.streetname = req.body.streetname;
+    newAccomodation.apartmentno = req.body.apartmentno;
+    newAccomodation.zipcode = req.body.zipcode;
+    newAccomodation.imageurllocation1 = req.body.imageurllocation1;
+    newAccomodation.imageurllocation2 = req.body.imageurllocation2;
+    newAccomodation.imageurllocation3 = req.body.imageurllocation3;
 
     newAccomodation.save(function(err) {
       if (err) {

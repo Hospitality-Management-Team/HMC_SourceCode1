@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -59,16 +59,9 @@ $(function() {
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-
                 <li><a href="updateListing.html">Update My Listings</a></li>
 				<li><a href="add_host_listing.html">Host Another Place</a></li>
 				<li><a href="index.html">Logout</a></li>
-=======
-                <li><a href="services.html">Services</a></li>
-    			<li><a href="signup.html">SignUp</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li class="current"><a href="#">Want to be a host?</a></li>
-
               </ul>
             </nav>
         </div>
@@ -146,11 +139,22 @@ $(function() {
                     <td>
                         <input type="text" class="text_2" id="host_place_name" name="host_place_name" placeholder="Name your place">
                     </td>
-                </tr>
-				<tr>!-->
+                </tr> !-->
+				
+				<tr>
                     <td colspan="2">
-                        <span class="reg_label">Upload an image of your place</span>
-						<input type="file" class="text" name="imageurllocation1" accept="image/gif, image/jpeg, image/png" multiple></input>
+                        <span class="reg_label">Upload images of your place</span>
+						<input type="file" class="text" name="imageurllocation1" id="imageurllocation1" accept="image/gif, image/jpeg, image/png" multiple></input>
+                    </td>
+                </tr>
+				<tr>
+                    <td colspan="2">
+						<input type="file" class="text" name="imageurllocation2" id="imageurllocation2" accept="image/gif, image/jpeg, image/png" multiple></input>
+                    </td>
+                </tr>
+				<tr>
+                    <td colspan="2">
+						<input type="file" class="text" name="imageurllocation3" id="imageurllocation3" accept="image/gif, image/jpeg, image/png" multiple></input>
                     </td>
                 </tr>
 				<!--

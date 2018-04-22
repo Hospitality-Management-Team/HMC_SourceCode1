@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Making the website responsive -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Meta data for info on the website -->
+    <meta name="description" content="Hospitality Management">
+    <title>Hospitality Management Web Design</title>
+    <link rel="stylesheet" href="css/style_rohini.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Hospitality Management <span class="highlight">Chicago</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="host_index.html">Home</a></li>
+                    <li><a href="about.html">View Reservation</a></li>
+                    <li class="current"><a href="add_host_listing.html">Host Another Place</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="add_host_place">
+        <div class="host_place_form">
+            <table class="table_font">
+                <tr>
+                    <td colspan="2">
+                        <span class="title">Hosting another place is easy! Just provide the details below</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="reg_label">Tell us a little about your property..</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="host_property_type" class="select">
+                            <option selected="selected">Property Type</option>
+                            <option value="home">Home</option>
+                            <option value="hotel">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="townhouse">Town-house</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="host_property_room" class="select">
+                            <option selected="selected">Rooms</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                            <option value="more">More than 5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="reg_label">Where is it Located?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" class="text_3" id="host_street_name" name="host_street_name" placeholder="Street Name">
+                        <input type="text" class="text_4" id="host_apt" name="host_apt" placeholder="Apt/Building/Suite no.">
+                        <input type="text" class="text_5" id="host_zipcode" name="host_zipcode" placeholder="Zipcode">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="reg_label">Give your place a name and show us what your place looks like..</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="text_2" id="host_place_name" name="host_place_name" placeholder="Name your place">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="reg_label">Upload an image of your place</span>
+                        <input type="file" class="text" name="filename" accept="image/gif, image/jpeg, image/png"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="reg_label">What kind of amenities does your place offer?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkBox" name="host_amenties" value="coffeeMachine" id="coffee" class="checks"><Label for="coffee">Coffee Machine</Label></input>
+                        <input type="checkBox" name="host_amenties" value="Wi-Fi" id="wi-fi" class="checks"><Label for="wi-fi">Wi-fi</Label></input>
+                        <input type="checkBox" name="host_amenties" value="TV" id="TV" class="checks"><Label for="TV">TV</Label></input>
+                        <input type="checkBox" name="host_amenties" value="AC" id="AC" class="checks"><Label for="AC">AC</Label></input>
+                        <input type="checkBox" name="host_amenties" value="Heat" id="Heat" class="checks"><Label for="Heat">Heat</Label></input>
+                        <input type="checkBox" name="host_amenties" value="Iron" id="Iron" class="checks"><Label for="Iron">Iron</Label></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="align_right">
+                        <input type="submit" class="button_1" id="host_submit" name="host_submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hospitality Management Web Design, Copyright &copy; 2018</p>
+    </footer>
+</body>
+</html>

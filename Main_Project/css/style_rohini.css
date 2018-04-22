@@ -1,212 +1,4 @@
-/* GLobal*/
-/* Styling the body tag*/
-body{
-  font: 15px/1.5 Arial, Helvetica, sans-serif;
-  padding:0;
-  margin:0;
-  background-color: #f4f4f4;
-}
-
-/* Styling all the containers of the website*/
-.container{
-    width:95%; /* Responsive */
-    margin: auto; /* Moving things to middle for size variations(expanding and compressing the site layout)*/
-    overflow:hidden; /* if something goes out of div, donot create scrollbar but rather hide the content*/
-}
-
-/* no margins and padding for uls*/
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-.button_1{
-  height: 38px;
-  background:#e8491d;
-  border: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #ffffff;
-}
-
-.dark{
-  padding: 15px;
-  background: #35424a;
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* Styling the header tag*/
-header{
-  background: #35424a;
-  color: #ffffff;
-  padding-top: 30px;
-  min-height: 70px; /*Responsive design criteria*/
-  border-bottom: #e8491d 3px solid;
-}
-
-/* Styling all the a tags within header*/
-header a{
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-header li{
-  float: left;
-  display: inline;
-  padding: 0 20px 0 10px; /* Bottom and left padding*/
-}
-
-/* Specific Styling*/
-header #branding{
-  float: left; /* floats to the left of the container*/
-}
-
-/* Specific Styling*/
-header #branding h1{
-  margin: 0;
-}
-
-header nav{
-  float: right;
-  margin-top: 15px;
-}
-
-header .highlight, header .current a{
-  color: #e8491d;
-  font-weight: bold;
-}
-header a:hover{
-  color:#cccccc;
-  font-weight:bold;
-}
-
-/* Styling the Showcase*/
-#showcase{
-  min-height: 400px;
-  background:url('../images/showcase2_image.jpg') no-repeat 0 -350px;
-  text-align: center;
-  color: #ffffff;
-}
-
-#showcase h1{
-  margin-top: 100px;
-  font-size: 55px;
-  margin-bottom: 10px;
-}
-
-#showcase p{
-  font-size: 20px;
-}
-
-/* Styling the newsletter*/
-#newsletter{
-  padding: 15px;
-  color: #ffffff;
-  background-color: #35424a;
-}
-
-#newsletter h1{
-  float: left;
-}
-
-#newsletter form{
-  float: right;
-  margin-top: 20px;
-}
-
-#newsletter input[type="email"]{
-  padding: 4px;
-  height: 25px;
-  width: 250px;
-}
-
-/* Styling the boxes*/
-#boxes{
-  margin-top: 20px;
-}
-
-#boxes .box{
-  float: left;
-  text-align: center;
-  width: 30%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-#boxes .box img{
-  width: 300px;
-}
-
-/* article tag of about page*/
-#sidebar{
-  float: right;
-  width: 30%;
-  margin-top:10px;
-}
-
-/* form tag of services page */
-#sidebar .quote input, #sidebar .quote textarea{
-  width: 90%;
-  padding: 5px;
-}
-
-/* aside tag of about page*/
-#main-col{
-  float: left;
-  width: 65%;
-}
-
-/* Services */
-
-#services li{
-  list-style: none;
-  padding: 20px;
-  border: #cccccc solid 1px;
-  margin-bottom: 5px;
-  background: #e6e6e6;
-}
-
-/* Registration page */
-#register-section{
-  margin-top: 15px;
-  padding: 15px;
-  color: #ffffff;
-  background-color: #35424a;
-}
-
-#register-section h3{
-  float: center;
-}
-
-#register-section .container{
-    width:50%;
-    margin: auto;
-    overflow:hidden;
-}
-
-#register-section .register input{
-  width: 100%;
-  padding: 5px;
-}
-
-#register-section .register button{
-  width: 30%;
-  float: center;
-  margin-top: 20px;
-}
-
-footer{
-  padding: 20px;
-  color: white;
-  background-color: #e8491d;
-  text-align: center;
-}
-
-/* signup page starts */
+﻿/* signup page starts */
 #signup {
     background: url('../images/register.jpg');
     min-height: 858px;
@@ -218,7 +10,7 @@ footer{
     background: #ffffff;
     border-radius: 4px;
     padding: 24px;
-    width: 20%;
+    width: 280px;
     height: 550px;
     position: relative;
     left: 200px;
@@ -229,6 +21,15 @@ footer{
 
 .table_font {
     width: 100%;
+}
+.login_button{
+  height: 38px;
+  background:#e8491d;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  margin-bottom:10px;
 }
 
 .title {
@@ -256,6 +57,7 @@ footer{
     border-color: #DBDBDB;
     border-radius: 2px;
     margin-bottom: 16px;
+	width:243px;
 }
 
 .reg_align {
@@ -321,8 +123,13 @@ footer{
     margin-bottom: 16px;
 }
 
-.align_right{
+.align_right {
     text-align: right;
+}
+
+.fb_button{
+	text-align:right;
+	padding-right:20px;
 }
 
 .link_2 {
@@ -335,7 +142,7 @@ footer{
     border: 1px solid #e8491d;
     text-decoration: none;
     font-size: 13px;
-	border-radius: 25px;
+    border-radius: 25px;
 }
 
 /* signup page ends */
@@ -353,10 +160,10 @@ footer{
     background: #ffffff;
     border-radius: 4px;
     padding: 24px;
-    width: 20%;
-    height: 250px;
+    width: 275px;
+    height: 360px;
     position: relative;
-    left: 850px;
+    left: 65%;
     top: 200px;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     color: #484848 !important;
@@ -365,18 +172,18 @@ footer{
 .link {
     height: 20px;
     margin-top: 8px;
-    margin-left: 50px;
-    padding-left: 16px;
-    padding-right: 24px;
+    margin-left: 61px;
+    padding-left: 19px;
+    padding-right: 21px;
     color: #e8491d;
-    border: 1px solid #e8491d;
-    margin-right: -13px;
-    text-decoration: none;
+    border: 6px solid #e8491d;
+    margin-right: -7px;
+    text-decoration: bold;
     font-size: 13px;
-	border-radius: 25px;
+    border-radius: 25px;
 }
 
-.member_text{
+.member_text {
     font-size: 14px;
     line-height: 30px;
     color: #484848;
@@ -404,7 +211,7 @@ footer{
     background: #ffffff;
     border-radius: 4px;
     padding: 24px;
-    width: 40%;
+    width: 600px;
     height: 710px;
     position: relative;
     left: 200px;
@@ -426,7 +233,7 @@ footer{
     border-color: #DBDBDB;
     border-radius: 2px;
     margin-bottom: 16px;
-	width: 226px;
+    width: 226px;
 }
 
 .text_3 {
@@ -442,8 +249,8 @@ footer{
     border-color: #DBDBDB;
     border-radius: 2px;
     margin-bottom: 16px;
-	width: 250px;
-	margin-right: 16px;
+    width: 250px;
+    margin-right: 16px;
 }
 
 .text_4 {
@@ -459,8 +266,8 @@ footer{
     border-color: #DBDBDB;
     border-radius: 2px;
     margin-bottom: 16px;
-	width: 84px;
-	margin-right: 16px;
+    width: 84px;
+    margin-right: 16px;
 }
 
 .text_5 {
@@ -476,7 +283,7 @@ footer{
     border-color: #DBDBDB;
     border-radius: 2px;
     margin-bottom: 16px;
-	width: 84px;
+    width: 84px;
 }
 
 .select {
@@ -492,52 +299,48 @@ footer{
     border-color: #DBDBDB;
     border-radius: 2px;
     margin-bottom: 16px;
-	width: 252px;
+    width: 252px;
 }
 
-/* Media Queries */
-@media(max-width: 768px)  {
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar,
-    #register-section h3,
-    #register-section form{
-      float: none;
-      text-align: center;
-      width: 100%;
-    }
+/* host signup ends */
 
-    header{
-      padding-bottom: 20px;
-    }
+/* host index starts */
 
-    #showcase h1{
-      margin-top: 40px;
-    }
+#host_showcase {
+    min-height: 400px;
+    background: url('../images/maxresdefault.jpg') no-repeat 0 -350px;
+    text-align: center;
+    color: #ffffff;
+    background-position: center;
+}
 
-    #newsletter form input[type='email'], .quote input, .quote textarea{
-      width: 100%;
-      margin-bottom: 5px;
-    }
+#boxes .host_box {
+    float: left;
+    text-align: left;
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 20px;
+    height: 500px;
+}
 
-    #newsletter button, .quote button{
-      display:block;
-      width:100%;
-    }
+/* host index ends */
 
-    #register-section form input[type='email'], .register input{
-      width: 100%;
-      margin-bottom: 5px;
-      margin-right: 5px;
-    }
+#add_host_place {
+    min-height: 700px;
+    overflow: hidden;
+    background-size: cover;
+}
 
-    #register-section .register button{
-      display:block;
-      width:100%;
-    }
+.host_place_form {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 600px;
+    height: 550px;
+    position: relative;
+    left: 200px;
+    top: 50px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    color: #484848 !important;
 }

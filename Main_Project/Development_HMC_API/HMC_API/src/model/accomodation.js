@@ -13,7 +13,7 @@ let AccomodationSchema = new Schema({
     required: true
   },
   accomodationtype: {
-    type: String,
+    type: String, 
     required: true
   },
   avgcost: Number,

@@ -5,17 +5,18 @@ let Schema = mongoose.Schema;
 // Schema for accomodation model
 let AccomodationSchema = new Schema({
   ownerfirstname: {
-    type: String,
-    required: true
+    type: String
   },
   ownerlastname: {
+    type: String
+  },
+  accomodationtype: {
     type: String,
     required: true
   },
-  accomodationtype: {
-    type: String, 
-    required: true
-  },
+  accomodationdescription: {
+    type: String
+  }
   avgcost: Number,
   geometry: {
     type: { type: String, default: 'Point' },

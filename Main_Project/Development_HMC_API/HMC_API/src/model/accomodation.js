@@ -16,7 +16,7 @@ let AccomodationSchema = new Schema({
   },
   accomodationdescription: {
     type: String
-  }
+  },
   avgcost: Number,
   geometry: {
     type: { type: String, default: 'Point' },
@@ -37,7 +37,7 @@ let AccomodationSchema = new Schema({
   imageurllocation1: String,
   imageurllocation2: String,
   imageurllocation3: String,
-  ammenities: [{type: Schema.Types.ObjectId],
+  ammenities: [{type: Schema.Types.ObjectId}],
   reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}]
 });
 

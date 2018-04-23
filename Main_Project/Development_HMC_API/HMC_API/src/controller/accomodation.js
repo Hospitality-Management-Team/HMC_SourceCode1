@@ -36,6 +36,7 @@ export default({ config, db }) => {
     newAccomodation.ownerfirstname = req.body.ownerfirstname;
     newAccomodation.ownerlastname = req.body.ownerlastname;
     newAccomodation.accomodationtype = req.body.accomodationtype;
+    newAccomodation.accomodationdescription = req.body.accomodationdescription;
     newAccomodation.avgcost = req.body.avgcost;
     newAccomodation.geometry.coordinates = req.body.geometry.coordinates;
     newAccomodation.mailaddress = req.body.mailaddress;

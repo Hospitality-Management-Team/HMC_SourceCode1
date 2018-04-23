@@ -46,6 +46,7 @@ export default({ config, db }) => {
     newAccomodation.streetname = req.body.streetname;
     newAccomodation.apartmentno = req.body.apartmentno;
     newAccomodation.zipcode = req.body.zipcode;
+    newAccomodation.ammenities = req.body.ammenities;
     newAccomodation.imageurllocation1 = req.body.imageurllocation1;
     newAccomodation.imageurllocation2 = req.body.imageurllocation2;
     newAccomodation.imageurllocation3 = req.body.imageurllocation3;

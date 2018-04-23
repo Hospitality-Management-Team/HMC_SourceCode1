@@ -49,15 +49,37 @@
       </div>
     </header>
       <div  class="container_menu">
-		<table cellpadding="10" style="width:500px">
-		<tr>
-			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckIn:</b></font><input type="text" id="CheckIn" size="8"></td>
-			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckOut:</b></font><input type="text" id="CheckOut" size="8"></td>
-			<td><button type="submit" class="button_1">Guests</button></td>
-			<td><button style="width:110px" type="submit" class="button_1">Home Type</button></td>
-			<td><button type="submit" class="button_1">Price</button></td>
-			<td><button style="width:120px" type="submit" class="button_1">More Filters</button></td>
-		</tr>
+		<table cellpadding="10">
+      <form method="post" id="accomodation" name="accomodation" >
+    		<tr>
+    			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckIn:</b></font><input type="text" id="CheckIn" size="8"></td>
+    			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckOut:</b></font><input type="text" id="CheckOut" size="8"></td>
+          <td cellpadding="100"><font color="#e8491d" size="2" ><b>Guest:</b></font>
+    				<select name="Guest">
+    					<option value="1">1</option>
+    					<option value="2">2</option>
+    					<option value="3">3</option>
+    					<option value="4">4+</option>
+    				</select>
+    			</td>
+          <td cellpadding="100"><font color="#e8491d" size="2" ><b>Home Type:</b></font>
+    				<select name="Home_Type">
+    					<option value="Apartment">Apartment</option>
+    					<option value="Condominium">Condominium</option>
+    					<option value="Home">Home</option>
+    					<option value="Town-House">Town-House</option>
+    				</select>
+    			</td>
+          <td cellpadding="100"><font color="#e8491d" size="2" ><b>Price:</b></font>
+    				<select name="Price">
+    					<option value="100"><$100</option>
+    					<option value="300">$100-$299</option>
+    					<option value="500">$300-$499</option>
+    					<option value="501">>$500</option>
+    				</select>
+    			</td>
+    			<td><input type="submit" style="width:120px" class="button_1" id="guest_submit" name="guest_submit" value="Search"></td></tr>
+      </form>
 		</table>
       </div>
 	<section id="boxes">

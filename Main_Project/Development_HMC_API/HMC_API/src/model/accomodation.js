@@ -37,7 +37,10 @@ let AccomodationSchema = new Schema({
   imageurllocation1: String,
   imageurllocation2: String,
   imageurllocation3: String,
-  ammenities: [{type: Schema.Types.ObjectId}],
+  ammenities: {
+    type: { type: String, default: 'None' },
+    features: [String]
+  },
   reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}]
 });
 

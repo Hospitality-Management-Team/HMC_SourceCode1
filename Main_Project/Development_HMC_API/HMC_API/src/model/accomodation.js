@@ -5,16 +5,17 @@ let Schema = mongoose.Schema;
 // Schema for accomodation model
 let AccomodationSchema = new Schema({
   ownerfirstname: {
-    type: String,
-    required: true
+    type: String
   },
   ownerlastname: {
-    type: String,
-    required: true
+    type: String
   },
   accomodationtype: {
     type: String,
     required: true
+  },
+  accomodationdescription: {
+    type: String
   },
   avgcost: Number,
   geometry: {
@@ -36,6 +37,10 @@ let AccomodationSchema = new Schema({
   imageurllocation1: String,
   imageurllocation2: String,
   imageurllocation3: String,
+  ammenities: {
+    type: { type: String, default: 'None' },
+    features: [String]
+  },
   reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}]
 });
 

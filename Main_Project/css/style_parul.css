@@ -1,0 +1,19 @@
+/* host update listing */
+#host {
+    min-height: 700px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.host_form {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+    width: 600px;
+    height: 550px;
+    position: relative;
+    left: 200px;
+    top: 50px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    color: #484848 !important;
+}

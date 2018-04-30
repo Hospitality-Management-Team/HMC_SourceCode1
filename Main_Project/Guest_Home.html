@@ -9,8 +9,78 @@
     <meta name="description" content="Hospitality Management">
     <meta name="author" content="Komal Shivhare">
     <title>Hospitality Management Web Design</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">	
+$.fn.serializeObject = function()
+{
+//   document.cookie="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZDgxY2I3NDZiZGNmMDk5ODliYmE2NSIsImlhdCI6MTUyNDExMjYxMiwiZXhwIjoxNTI2NzA0NjEyfQ.jlkAg9Gx9xoOvMBwUKMQQdqvQyWrp-3jCqX3uW1fooc"
+   var o = {};
+   var a = this.serializeArray();
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
+   }
+   );
+   console.log(o);
+   return o;
+};
+
+$(function() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "http://localhost:3005/v1/accomodation",false);
+        xhttp.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZDgxY2I3NDZiZGNmMDk5ODliYmE2NSIsImlhdCI6MTUyNDExMjYxMiwiZXhwIjoxNTI2NzA0NjEyfQ.jlkAg9Gx9xoOvMBwUKMQQdqvQyWrp-3jCqX3uW1fooc");		
+        xhttp.send();
+//		console.log(xhttp.responseText);
+		var myArr = JSON.parse(xhttp.responseText);
+		var arrlen= myArr.length;
+		var accom={};
+		var  inhtm="";
+		console.log(arrlen);
+		for (var i=0; i<arrlen; i++){
+//			console.log(myArr[i]);
+//			console.log(myArr[i].imageurllocation1);
+			inhtm=inhtm + "<div class=\"box_room\"><a href=\"BookPlace.html\"><img src=\""+myArr[i].imageurllocation1+"\" alt=\"Room options\" height=\"275\"></a><p><b><font color=\"red\">Single Room:</font></b></p></div>";
+//			console.log(inhtm);
+		}
+		document.getElementById("body_guest").innerHTML=inhtm;});
+function processForm() {
+		var form1=document.getElementById("accomodation")
+		JSONMSG=JSON.stringify($(form1).serializeObject());
+		Json1=JSONMSG
+		var xhttp = new XMLHttpRequest();
+		console.log(JSONMSG);
+		xhttp.open("GET", "http://localhost:3005/v1/booking/search",false);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhZDgxY2I3NDZiZGNmMDk5ODliYmE2NSIsImlhdCI6MTUyNDExMjYxMiwiZXhwIjoxNTI2NzA0NjEyfQ.jlkAg9Gx9xoOvMBwUKMQQdqvQyWrp-3jCqX3uW1fooc");		
+        xhttp.send(JSONMSG);
+		var myArr = JSON.parse(xhttp.responseText);
+		var arrlen= myArr.length;
+		var accom={};
+		var  inhtm="";
+		console.log(arrlen);
+		for (var i=0; i<arrlen; i++){
+//			console.log(myArr[i]);
+//			console.log(myArr[i].imageurllocation1);
+			inhtm=inhtm + "<div class=\"box_room\"><a href=\"BookPlace.html\"><img src=\""+myArr[i].imageurllocation1+"\" alt=\"Room options\" height=\"275\"></a><p><b><font color=\"red\">Single Room:</font></b></p></div>";
+//			console.log(inhtm);
+		}
+		console.log(inhtm)
+		document.getElementById("body_guest").innerHTML=inhtm;
+    };
+
+    
+
+
+</script>
+
     <link rel="stylesheet" href="css/style_komal.css">
-	  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	  <script>
@@ -18,13 +88,7 @@
 		$( "#CheckIn" ).datepicker();
 		$( "#CheckOut" ).datepicker();
 		} );
-	  </script>
-    <script type="text/javascript">
-			function googleTranslateElementInit() {
-			new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-			}
-		</script>
-		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	</script>
 	</head>
   <body>
     <header>
@@ -49,42 +113,43 @@
       </div>
     </header>
       <div  class="container_menu">
-		<table cellpadding="10">
-      <form method="post" id="accomodation" name="accomodation" >
-    		<tr>
-    			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckIn:</b></font><input type="text" id="CheckIn" size="8"></td>
-    			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckOut:</b></font><input type="text" id="CheckOut" size="8"></td>
-          <td cellpadding="100"><font color="#e8491d" size="2" ><b>Guest:</b></font>
-    				<select name="Guest">
-    					<option value="1">1</option>
-    					<option value="2">2</option>
-    					<option value="3">3</option>
-    					<option value="4">4+</option>
-    				</select>
-    			</td>
-          <td cellpadding="100"><font color="#e8491d" size="2" ><b>Home Type:</b></font>
-    				<select name="Home_Type">
-    					<option value="Apartment">Apartment</option>
-    					<option value="Condominium">Condominium</option>
-    					<option value="Home">Home</option>
-    					<option value="Town-House">Town-House</option>
-    				</select>
-    			</td>
-          <td cellpadding="100"><font color="#e8491d" size="2" ><b>Price:</b></font>
-    				<select name="Price">
-    					<option value="100"><$100</option>
-    					<option value="300">$100-$299</option>
-    					<option value="500">$300-$499</option>
-    					<option value="501">>$500</option>
-    				</select>
-    			</td>
-    			<td><input type="submit" style="width:120px" class="button_1" id="guest_submit" name="guest_submit" value="Search"></td></tr>
-      </form>
+		<form method="post" id="accomodation" name="accomodation" onsubmit="processForm()" >
+		<table cellpadding="10" >
+		<tr>
+			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckIn:</b></font><input type="text" name="CheckIn" id="CheckIn" size="8"></td>
+			<td cellpadding="100"><font color="#e8491d" size="2" ><b>CheckOut:</b></font><input type="text" name="CheckOut" id="CheckOut" size="8"></td>
+			<td cellpadding="100"><font color="#e8491d" size="2" ><b>Guest:</b></font>
+				<select name="Guest" class="select">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4+</option>
+				</select>
+			</td>
+			<td cellpadding="100"><font color="#e8491d" size="2" ><b>Home Type:</b></font>
+				<select name="Home_Type" class="select">
+					<option value="Apartment">Apartment</option>
+					<option value="Condominium">Condominium</option>
+					<option value="Home">Home</option>
+					<option value="Town-House">Town-House</option>
+				</select>
+			</td>
+			<td cellpadding="100"><font color="#e8491d" size="2" ><b>Price:</b></font>
+				<select name="Price" class="select">
+					<option value="100"><$100</option>
+					<option value="300">$100-$299</option>
+					<option value="500">$300-$499</option>
+					<option value="501">>$500</option>
+				</select>
+			</td>
+			<td><input type="submit" style="width:120px" class="button_1" id="guest_submit" name="guest_submit" value="Search"></td>
+</tr>
 		</table>
+		</form>
       </div>
 	<section id="boxes">
-      <div class="container_menu">
-		<div class="box_room">
+      <div class="container_menu" id="body_guest">
+<!--		<div class="box_room">
 			<a href="BookPlace.html"><img src="./images/bookroom1.jpg" alt="Room options" height="275"></a>
 			<p><b><font color="red">Single Room:</font> From <font color="red">$110</font> per Night Free Cancellation</b>
 			</p>
@@ -103,12 +168,11 @@
 			<a href="BookPlace.html"><img src="./images/guestroom2.jpg" alt="Room options" height="275"></a>
 			<p><b><font color="red">Private room:</font> From <font color="red">$350</font> per Night Free Cancellation</b>
 			</p>
-		</div>
+		</div>-->
 	</div>
 	</section>
     <footer>
       <p>Hospitality Management Web Design, Copyright &copy; 2018</p>
-      <div id="google_translate_element"></div>
     </footer>
   </body>
 </html>

@@ -31,6 +31,34 @@ export default({ config, db }) => {
       res.json(booking);
     });
   });
+  api.post('/search', (req, res) => {
+    var cursor=Booking.find({fromdate:{$gte:req.body.CheckIn},tilldate:{$lte:req.body.CheckOut}},'property', (err, booking) => {
+
+      if (err) {
+        res.send(err);
+      }
+	}).cursor();
+	var bkng={};
+	var bkngprop={};
+	var i=0;
+	cursor.on('data',function(doc) {
+	var propid=doc.property.toString();
+    var bkngid = mongoose.Types.ObjectId(propid);
+	console.log(bkngid);
+	bkng[i]=bkngid;
+	console.log(bkng);
+	i=i+1;});
+	
+	cursor.on('close',function(doc) {
+	console.log(bkng);
+	Accomodation.find({_id:{$nin: [bkng[0],bkng[1]]}},(err,accomodation)=> {
+		  if (err){
+			  res.send(err);
+		  }
+	  res.json(accomodation); 
+	  });
+	});
+	});
 
   // '/v1/booking/add' - POST - add a booking
   api.post('/add',authenticate,  (req, res) => {
